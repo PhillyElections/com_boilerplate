@@ -9,6 +9,11 @@
 
 defined('_JEXEC') or die('Restricted access');
 
+jimport('joomla.application.component.controller');
+jimport('joomla.application.component.model');
+jimport('joomla.application.component.table');
+jimport('joomla.application.component.view');
+
 // Uzer -- our cheap and dirty backend ACL enforcer
 jimport('uzer.Uzer');
 Uzer::blok(JFactory::getUser(), 'Administrator');
