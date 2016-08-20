@@ -2,7 +2,13 @@
 // no direct access
 defined('_JEXEC') or die('Restricted access');
 
-$item = $this->item;
+if (count(JRequest::getVar('msg', null, 'post'))) {
+    foreach (JRequest::getVar('msg', null, 'post') as $msg) {
+        JError::raiseWarning(1, $msg);
+    }
+}
+
+$item = $this->item ? $this->item : '';
 
 ?>
 <form action="<?=JRoute::_('index.php?option=com_pvnew');?>" method="post" id="adminForm" name="adminForm" class="form-validate">
