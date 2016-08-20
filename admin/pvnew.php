@@ -9,6 +9,9 @@
 
 defined('_JEXEC') or die('Restricted access');
 
+// including debugger
+jimport('kint.kint');
+
 // Uzer -- our cheap and dirty backend ACL enforcer
 jimport('uzer.Uzer');
 Uzer::blok(JFactory::getUser(), 'Administrator');
