@@ -9,11 +9,6 @@
 
 defined('_JEXEC') or die('Restricted access');
 
-jimport('joomla.application.component.controller');
-jimport('joomla.application.component.model');
-jimport('joomla.application.component.table');
-jimport('joomla.application.component.view');
-
 // Uzer -- our cheap and dirty backend ACL enforcer
 jimport('uzer.Uzer');
 Uzer::blok(JFactory::getUser(), 'Administrator');
@@ -26,7 +21,7 @@ $language->load(JRequest::getCmd('option'), JPATH_SITE);
 require_once JPATH_COMPONENT . DS . 'controller.php';
 
 // Require specific controller if requested
-if ($controller = JRequest::getWord('controller', 'index')) {
+if ($controller = JRequest::getWord('controller', 'items')) {
     $path = JPATH_COMPONENT . DS . 'controllers' . DS . $controller . '.php';
     if (file_exists($path)) {
         require_once $path;
