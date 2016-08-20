@@ -38,6 +38,6 @@ class PvnewViewItem extends JView
         $this->assignRef('item', $item);
         $this->assignRef('isNew', $isNew);
 
-        parent::display($tpl);
+        parent::display();
     }
 }
