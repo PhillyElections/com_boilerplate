@@ -28,7 +28,7 @@ $item = $this->item ? $this->item : '';
                 <td height="30">&nbsp;</td>
                 <td>
                     <button class="button validate" type="submit"><?=$this->isNew ? JText::_('SUBMIT') : JText::_('UPDATE');?></button>
-                    <input type="hidden" name="task" value="<?=$this->isNew ? 'add' : 'update';?>" />
+                    <input type="hidden" name="task" value="<?=$this->isNew ? 'save' : 'update';?>" />
                     <input type="hidden" name="controller" value="item" />
                     <input type="hidden" name="id" value="<?=$item->id;?>" />
                     <?=JHTML::_('form.token');?>
