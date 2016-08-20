@@ -7,7 +7,7 @@ if (count(JRequest::getVar('msg', null, 'post'))) {
         JError::raiseWarning(1, $msg);
     }
 }
-
+d('in default template of item view');
 $item = $this->item ? $this->item : '';
 
 ?>
