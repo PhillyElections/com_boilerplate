@@ -27,7 +27,7 @@ class PvnewViewItem extends JView
         if ($isNew) {
             JToolBarHelper::save('save', 'Register');
             JToolBarHelper::cancel('cancel', 'Close');
-            // We'll use a separate template for new pvnews: default_add
+            // We'll use a separate template for new items: default_add
             $tpl = 'add';
         } else {
             // for existing items the button is renamed `close`
