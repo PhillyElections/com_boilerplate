@@ -54,6 +54,7 @@ class PvnewControllerItem extends PvnewController
         } else {
             // let's grab all those errors and make them available to the view
             JRequest::setVar('msg', $model->getErrors());
+            dd('save method -- ditching for errors', $model->getErrors());
 
             return $this->edit();
         }
