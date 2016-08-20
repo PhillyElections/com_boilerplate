@@ -17,7 +17,9 @@ class PvnewControllerItems extends PvnewController
      */
     public function display()
     {
-        $view->display();
+        JRequest::setVar('view', 'items');
+
+        parent::display();
     }
 
     /**
