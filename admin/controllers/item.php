@@ -54,14 +54,13 @@ class PvnewControllerItem extends PvnewController
         } else {
             // let's grab all those errors and make them available to the view
             JRequest::setVar('msg', $model->getErrors());
-            dd('save method -- ditching for errors', $model->getErrors());
 
             return $this->edit();
         }
 
         // Let's go back to the default view
         $link = 'index.php?option=com_pvnew';
-        dd('save method');
+
         $this->setRedirect($link, $msg);
     }
 

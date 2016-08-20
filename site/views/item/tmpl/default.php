@@ -1,39 +1,96 @@
 <?php
-// no direct access
+// No direct access
 defined('_JEXEC') or die('Restricted access');
 
-if (count(JRequest::getVar('msg', null, 'post'))) {
-    foreach (JRequest::getVar('msg', null, 'post') as $msg) {
-        JError::raiseWarning(1, $msg);
+/**
+ * Item Controller for PVNew Component
+ *
+ * @package    Philadelphia.Votes
+ * @subpackage Components
+ * @license    GNU/GPL
+ */
+class PvnewControllerItem extends PvnewController
+{
+    /**
+     * Bind tasks to methods
+     * @return void
+     */
+    public function __construct()
+    {
+        parent::__construct();
+
+        // Register Extra tasks
+        $this->registerTask('add', 'edit');
+        $this->registerTask('update', 'save');
+    }
+
+    /**
+     * Display the edit form
+     * @return void
+     */
+    public function edit()
+    {
+        d('edit method');
+        JRequest::setVar('view', 'item');
+
+        parent::display();
+    }
+
+    /**
+     * Save a record (and redirect to main page)
+     *
+     * @return void
+     */
+    public function save()
+    {
+
+        JRequest::checkToken() or jexit('Invalid Token');
+
+        $model = $this->getModel('item');
+        $post  = JRequest::get('post');
+
+        if ($model->store($post)) {
+            $msg = JText::_('Saved!');
+        } else {
+            // let's grab all those errors and make them available to the view
+            JRequest::setVar('msg', $model->getErrors());
+
+            return $this->edit();
+        }
+
+        // Let's go back to the default view
+        $link = 'index.php?option=com_pvnew';
+
+        $this->setRedirect($link, $msg);
+    }
+
+    /**
+     * Remove record(s)
+     * @return void
+     */
+    public function remove()
+    {
+        JRequest::checkToken() or jexit('Invalid Token');
+
+        $model = $this->getModel('item');
+        if (!$model->delete()) {
+            $msg = JText::_('Error: One or More Items Could not be Deleted');
+        } else {
+            $msg = JText::_('Items(s) Deleted');
+        }
+
+        dd('remove method');
+        $this->setRedirect('index.php?option=com_pvnew', $msg);
+    }
+
+    /**
+     * Cancel editing a record
+     * @return void
+     */
+    public function cancel()
+    {
+        $msg = JText::_('Operation Cancelled');
+        dd('cancel method');
+        $this->setRedirect('index.php?option=com_pvnew', $msg);
     }
 }
-
-$item = $this->item ? $this->item : '';
-
-?>
-<form action="<?=JRoute::_('index.php?option=com_pvnew');?>" method="post" id="adminForm" name="adminForm" class="form-validate">
-    <table cellpadding="0" cellspacing="0" border="0" class="adminform">
-        <tbody>
-            <tr>
-                <td width="200" height="30">
-                    <label id="namemsg" for="field">
-                        <?=JText::_('FIELD');?>:
-                    </label>
-                </td>
-                <td>
-                    <input type="text" id="field" name="field" size="62" value="<?=$item->field;?>" class="input_box required" maxlength="60" placeholder="<?=JText::_('FIELD PLACEHOLDER');?>" />
-                </td>
-            </tr>
-            <tr>
-                <td height="30">&nbsp;</td>
-                <td>
-                    <button class="button validate" type="submit"><?=$this->isNew ? JText::_('SUBMIT') : JText::_('UPDATE');?></button>
-                    <input type="hidden" name="task" value="<?=$this->isNew ? 'add' : 'update';?>" />
-                    <input type="hidden" name="controller" value="item" />
-                    <input type="hidden" name="id" value="<?=$item->id;?>" />
-                    <?=JHTML::_('form.token');?>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</form>
