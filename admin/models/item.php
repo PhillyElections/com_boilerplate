@@ -68,6 +68,7 @@ class PvnewModelItem extends JModel
      */
     public function store()
     {
+        dd("model item store()");
         $row = &$this->getTable();
 
         $dateNow = &JFactory::getDate();
