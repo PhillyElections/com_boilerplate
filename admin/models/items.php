@@ -56,6 +56,7 @@ class PvnewModelItems extends JModel
      */
     public function _buildQuery()
     {
+        d('in buildQuery');
         $where = ';';
         $query = 'SELECT * FROM `#__pv_news` ';
 

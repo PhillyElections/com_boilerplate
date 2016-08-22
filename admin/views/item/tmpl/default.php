@@ -7,8 +7,9 @@ if (count(JRequest::getVar('msg', null, 'post'))) {
         JError::raiseWarning(1, $msg);
     }
 }
-d('in default template of item view');
-$item = $this->item ? $this->item : '';
+
+// try to cast to object next
+$item = !$this->isNew ? $this->item : JRequest::get('post');
 
 ?>
 <form action="<?=JRoute::_('index.php?option=com_pvnew');?>" method="post" id="adminForm" name="adminForm" class="form-validate">
@@ -21,7 +22,7 @@ $item = $this->item ? $this->item : '';
                     </label>
                 </td>
                 <td>
-                    <input type="text" id="field" name="field" size="62" value="<?=$item->field;?>" class="input_box required" maxlength="60" placeholder="<?=JText::_('FIELD PLACEHOLDER');?>" />
+                    <input type="text" id="field" name="field" size="62" value="<?=$item->field ? $item->field : $item['field'];?>" class="input_box required" maxlength="60" placeholder="<?=JText::_('FIELD PLACEHOLDER');?>" />
                 </td>
             </tr>
             <tr>

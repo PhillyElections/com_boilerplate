@@ -30,7 +30,6 @@ class PvnewControllerItem extends PvnewController
      */
     public function edit()
     {
-        d('edit method');
         JRequest::setVar('view', 'item');
 
         parent::display();
@@ -79,7 +78,6 @@ class PvnewControllerItem extends PvnewController
             $msg = JText::_('Items(s) Deleted');
         }
 
-        dd('remove method');
         $this->setRedirect('index.php?option=com_pvnew', $msg);
     }
 
@@ -90,7 +88,7 @@ class PvnewControllerItem extends PvnewController
     public function cancel()
     {
         $msg = JText::_('Operation Cancelled');
-        dd('cancel method');
+
         $this->setRedirect('index.php?option=com_pvnew', $msg);
     }
 }

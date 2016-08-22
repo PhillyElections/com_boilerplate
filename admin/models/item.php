@@ -68,7 +68,6 @@ class PvnewModelItem extends JModel
      */
     public function store()
     {
-        d("model item store()");
         $row = &$this->getTable();
 
         $dateNow = &JFactory::getDate();
@@ -100,11 +99,10 @@ class PvnewModelItem extends JModel
 
         // Store the web link table to the database
         if (!$row->store()) {
-            dd('store failed');
             $this->setError($row->getErrorMsg());
             return false;
         }
-        dd('store succeeded');
+
         return true;
     }
 
