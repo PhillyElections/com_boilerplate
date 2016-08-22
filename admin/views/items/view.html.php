@@ -22,8 +22,7 @@ class PvnewViewItems extends JView
         JToolBarHelper::editListX();
         JToolBarHelper::addNewX();
 
-        $t = &JToolbar::getInstance('toolbar');
-
+        d($this);
         $items      = &$this->get('Data');
         $pagination = &$this->get('Pagination');
 

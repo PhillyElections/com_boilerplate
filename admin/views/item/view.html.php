@@ -28,7 +28,7 @@ class PvnewViewItem extends JView
             JToolBarHelper::save('save', 'Register');
             JToolBarHelper::cancel('cancel', 'Close');
             // We'll use a separate template for new items: default_add
-            $tpl = 'add';
+            // $tpl = 'add';
         } else {
             // for existing items the button is renamed `close`
             JToolBarHelper::save('save', 'Update');
@@ -38,6 +38,6 @@ class PvnewViewItem extends JView
         $this->assignRef('item', $item);
         $this->assignRef('isNew', $isNew);
 
-        parent::display();
+        parent::display($tpl);
     }
 }
