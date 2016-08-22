@@ -25,6 +25,7 @@ class TableItem extends JTable
      */
     public function __construct(&$_db)
     {
+        d('in table contstructor');
         parent::__construct('#__pv_news', 'id', $_db);
     }
 
@@ -34,6 +35,7 @@ class TableItem extends JTable
      */
     public function check()
     {
+        d('in store method');
         $error = 0;
 
         // we need something for field
