@@ -7,7 +7,7 @@ SET @db   = DATABASE();
 
 /* ==================== tables ==================== */
 
-CREATE TABLE IF NOT EXISTS `#__pv_news` (
+CREATE TABLE IF NOT EXISTS `#__boilerplate` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `field` varchar(100) NOT NULL DEFAULT '',
   `published` tinyint(1) unsigned NOT NULL DEFAULT 0,

@@ -3,7 +3,7 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Item Table for Pvnew Component
+ * Item Table for Boilerplate Component
  *
  * @package    Philadelphia.Votes
  * @subpackage Components

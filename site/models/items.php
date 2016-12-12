@@ -3,13 +3,13 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Items Model for Pvnew Component
+ * Items Model for Boilerplate Component
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  * @license    GNU/GPL
  */
-class PvnewModelItems extends JModel
+class BoilerplateModelItems extends JModel
 {
     /**
      * Items data array

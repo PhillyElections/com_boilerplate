@@ -3,13 +3,13 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Item View for Pvnew Component
+ * Item View for Boilerplate Component
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  * @license    GNU/GPL
  */
-class PvnewViewItem extends JView
+class BoilerplateViewItem extends JView
 {
     /**
      * display method of Item view

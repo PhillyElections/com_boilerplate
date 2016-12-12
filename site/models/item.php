@@ -3,13 +3,13 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Item Model for PVNew Component
+ * Item Model for Boilerplate Component
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  * @license    GNU/GPL
  */
-class PvnewModelPvnew extends JModel
+class BoilerplateModelBoilerplate extends JModel
 {
     /**
      * Constructor retrieves the ID from the request

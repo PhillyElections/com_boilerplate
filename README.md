@@ -1,4 +1,4 @@
-# com_pvboilerplate
+# com_boilerplate
 ###Joomla 1.5 component boilerplate.
 
 Required libraries:

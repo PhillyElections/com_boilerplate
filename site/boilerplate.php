@@ -1,6 +1,6 @@
 <?php
 /**
- * Admin bootstrap file for PVNew Component
+ * Site bootstrap file for Boilerplate Component
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
@@ -9,22 +9,17 @@
 
 defined('_JEXEC') or die('Restricted access');
 
-// including debugger
 jimport('kint.kint');
 
-// Uzer -- our cheap and dirty backend ACL enforcer
-jimport('uzer.Uzer');
-Uzer::blok(JFactory::getUser(), 'Administrator');
-
-// Instantiate any language files if any
 $language = JFactory::getLanguage();
 $language->load(JRequest::getCmd('option'), JPATH_SITE);
 
 // Require the base controller
+
 require_once JPATH_COMPONENT . DS . 'controller.php';
 
 // Require specific controller if requested
-if ($controller = JRequest::getWord('controller', 'items')) {
+if ($controller = JRequest::getWord('view', 'items')) {
     $path = JPATH_COMPONENT . DS . 'controllers' . DS . $controller . '.php';
     if (file_exists($path)) {
         require_once $path;
@@ -34,7 +29,7 @@ if ($controller = JRequest::getWord('controller', 'items')) {
 }
 
 // Create the controller
-$classname = 'PvnewController' . ucfirst($controller);
+$classname = 'BoilerplateController' . ucfirst($controller);
 
 $controller = new $classname();
 

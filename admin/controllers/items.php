@@ -3,13 +3,13 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Items Controller for PVNew Component
+ * Items Controller for Boilerplate Component
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  * @license    GNU/GPL
  */
-class PvnewControllerItems extends PvnewController
+class BoilerplateControllerItems extends BoilerplateController
 {
     /**
      * Display the Items View
@@ -30,7 +30,7 @@ class PvnewControllerItems extends PvnewController
     {
         $mainframe = JFactory::getApplication();
         $cid       = JRequest::getVar('cid');
-        $mainframe->redirect('index.php?option=com_pvnew&controller=item&task=edit&cid=' . $cid[0]);
+        $mainframe->redirect('index.php?option=com_boilerplate&controller=item&task=edit&cid=' . $cid[0]);
     }
 
     /**
@@ -40,6 +40,6 @@ class PvnewControllerItems extends PvnewController
     public function add()
     {
         $mainframe = JFactory::getApplication();
-        $mainframe->redirect('index.php?option=com_pvnew&controller=item&task=add&&cid=' . $cid[0]);
+        $mainframe->redirect('index.php?option=com_boilerplate&controller=item&task=add&&cid=' . $cid[0]);
     }
 }

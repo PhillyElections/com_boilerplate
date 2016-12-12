@@ -1,2 +1,2 @@
 DROP TABLE 
-`#__pv_news`;
+`#__boilerplate`;

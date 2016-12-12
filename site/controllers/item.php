@@ -3,13 +3,13 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Item Controller for PVNew Component
+ * Item Controller for Boilerplate Component
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  * @license    GNU/GPL
  */
-class PvnewControllerItem extends PvnewController
+class BoilerplateControllerItem extends BoilerplateController
 {
     /**
      * Bind tasks to methods
@@ -57,7 +57,7 @@ class PvnewControllerItem extends PvnewController
         }
 
         // Let's go back to the default view
-        $link = 'index.php?option=com_pvnew';
+        $link = 'index.php?option=com_boilerplate';
         $this->setRedirect($link, $msg);
     }
 
@@ -76,7 +76,7 @@ class PvnewControllerItem extends PvnewController
             $msg = JText::_('Items(s) Deleted');
         }
 
-        $this->setRedirect('index.php?option=com_pvnew', $msg);
+        $this->setRedirect('index.php?option=com_boilerplate', $msg);
     }
 
     /**
@@ -86,6 +86,6 @@ class PvnewControllerItem extends PvnewController
     public function cancel()
     {
         $msg = JText::_('Operation Cancelled');
-        $this->setRedirect('index.php?option=com_pvnew', $msg);
+        $this->setRedirect('index.php?option=com_boilerplate', $msg);
     }
 }

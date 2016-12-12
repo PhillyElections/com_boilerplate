@@ -3,13 +3,13 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Default Controller for PVNew Component
+ * Default Controller for Boilerplate Component
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  * @license    GNU/GPL
  */
-class PvnewController extends JController
+class BoilerplateController extends JController
 {
     /**
      * Method to display the view

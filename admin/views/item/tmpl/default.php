@@ -12,7 +12,7 @@ if (count(JRequest::getVar('msg', null, 'post'))) {
 $item = !$this->isNew ? $this->item : JRequest::get('post');
 
 ?>
-<form action="<?=JRoute::_('index.php?option=com_pvnew');?>" method="post" id="adminForm" name="adminForm" class="form-validate">
+<form action="<?=JRoute::_('index.php?option=com_boilerplate');?>" method="post" id="adminForm" name="adminForm" class="form-validate">
     <table cellpadding="0" cellspacing="0" border="0" class="adminform">
         <tbody>
             <tr>

@@ -3,21 +3,21 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Items View for Pvnew Component
+ * Items View for Boilerplate Component
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  * @license    GNU/GPL
  */
-class PvnewViewItems extends JView
+class BoilerplateViewItems extends JView
 {
     /**
-     * Pvnew view display method
+     * Boilerplate view display method
      * @return void
      **/
     public function display($tpl = null)
     {
-        JToolBarHelper::title(JText::_('PVNews Items Manager'), 'generic.png');
+        JToolBarHelper::title(JText::_('Boilerplate Items Manager'), 'generic.png');
         JToolBarHelper::deleteList();
         JToolBarHelper::editListX();
         JToolBarHelper::addNewX();
