@@ -17,13 +17,6 @@ class BoilerplateViewItems extends JView
      **/
     public function display($tpl = null)
     {
-        JToolBarHelper::title(JText::_('Boilerplate Items Manager'), 'generic.png');
-        JToolBarHelper::deleteList();
-        JToolBarHelper::editListX();
-        JToolBarHelper::addNewX();
-
-        $t = &JToolbar::getInstance('toolbar');
-
         $items      = &$this->get('Data');
         $pagination = &$this->get('Pagination');
 
