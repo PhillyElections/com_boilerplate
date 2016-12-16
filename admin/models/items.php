@@ -58,7 +58,7 @@ class BoilerplateModelItems extends JModel
     {
         d('in buildQuery');
         $where = ' ';
-        $query = 'SELECT * FROM `#__pv_news` ';
+        $query = 'SELECT * FROM `#__boilerplate` ';
 
         return $query . $where;
     }
