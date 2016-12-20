@@ -3,13 +3,13 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Items Model for Boilerplate Component
+ * Items Model for [COmponent] Component
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  * @license    GNU/GPL
  */
-class BoilerplateModelItems extends JModel
+class [Component]ModelItems extends JModel
 {
     /**
      * Items data array
@@ -57,7 +57,7 @@ class BoilerplateModelItems extends JModel
     public function _buildQuery()
     {
         $where = ';';
-        $query = 'SELECT * FROM `#__boilerplate` ';
+        $query = 'SELECT * FROM `#__[component]` ';
 
         return $query . $where;
     }
@@ -100,7 +100,6 @@ class BoilerplateModelItems extends JModel
     {
         // Load the content if it doesn't already exist
         if (empty($this->_pagination)) {
-//            jimport('joomla.html.pagination');
             $this->_pagination = new JPagination($this->getTotal(), $this->getState('limitstart'), $this->getState('limit'));
         }
 

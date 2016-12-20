@@ -3,13 +3,13 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Items Model for Boilerplate Component
+ * Items Model for [COmponent] Component
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  * @license    GNU/GPL
  */
-class BoilerplateModelItems extends JModel
+class [Component]ModelItems extends JModel
 {
     /**
      * Items data array
@@ -58,7 +58,7 @@ class BoilerplateModelItems extends JModel
     {
         d('in buildQuery');
         $where = ' ';
-        $query = 'SELECT * FROM `#__boilerplate` ';
+        $query = 'SELECT * FROM `#__[component]` ';
 
         return $query . $where;
     }

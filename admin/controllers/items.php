@@ -3,13 +3,13 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Items Controller for Boilerplate Component
+ * Items Controller for [COmponent] Component
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  * @license    GNU/GPL
  */
-class BoilerplateControllerItems extends BoilerplateController
+class [Component]ControllerItems extends [Component]Controller
 {
     /**
      * Display the Items View
@@ -30,7 +30,7 @@ class BoilerplateControllerItems extends BoilerplateController
     {
         $mainframe = JFactory::getApplication();
         $cid       = JRequest::getVar('cid');
-        $mainframe->redirect('index.php?option=com_boilerplate&controller=item&task=edit&cid=' . $cid[0]);
+        $mainframe->redirect('index.php?option=com_[component]&controller=item&task=edit&cid=' . $cid[0]);
     }
 
     /**
@@ -40,6 +40,6 @@ class BoilerplateControllerItems extends BoilerplateController
     public function add()
     {
         $mainframe = JFactory::getApplication();
-        $mainframe->redirect('index.php?option=com_boilerplate&controller=item&task=add&&cid=' . $cid[0]);
+        $mainframe->redirect('index.php?option=com_[component]&controller=item&task=add&&cid=' . $cid[0]);
     }
 }

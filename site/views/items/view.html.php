@@ -3,16 +3,16 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Items View for Boilerplate Component
+ * Items View for [COmponent] Component
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  * @license        GNU/GPL
  */
-class BoilerplateViewItems extends JView
+class [Component]ViewItems extends JView
 {
     /**
-     * Boilerplate view display method
+     * Items view display method
      * @return void
      **/
     public function display($tpl = null)

@@ -5,7 +5,7 @@ $pagination = &$this->pagination;
 $items      = $this->items;
 
 ?>
-<form action="<?=JRoute::_('index.php?option=com_boilerplate');?>" method="post" name="adminForm" id="adminForm">
+<form action="<?=JRoute::_('index.php?option=com_[component]');?>" method="post" name="adminForm" id="adminForm">
     <div id="editcell">
         <table class="adminlist">
             <thead>

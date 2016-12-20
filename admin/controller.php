@@ -3,16 +3,16 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Default Controller for Boilerplate Component
+ * Default Controller for [COmponent] Component
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  * @license    GNU/GPL
  */
-class BoilerplateController extends JController
+class [Component]Controller extends JController
 {
     /**
-     * Method to display the view
+     * Method to display the default view
      * @access    public
      */
     public function display()

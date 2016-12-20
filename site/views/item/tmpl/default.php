@@ -3,13 +3,13 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Item Controller for Boilerplate Component
+ * Item Controller for [COmponent] Component
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  * @license    GNU/GPL
  */
-class BoilerplateControllerItem extends BoilerplateController
+class [Component]ControllerItem extends [Component]Controller
 {
     /**
      * Bind tasks to methods
@@ -59,7 +59,7 @@ class BoilerplateControllerItem extends BoilerplateController
         }
 
         // Let's go back to the default view
-        $link = 'index.php?option=com_boilerplate';
+        $link = 'index.php?option=com_[component]';
 
         $this->setRedirect($link, $msg);
     }
@@ -80,7 +80,7 @@ class BoilerplateControllerItem extends BoilerplateController
         }
 
         dd('remove method');
-        $this->setRedirect('index.php?option=com_boilerplate', $msg);
+        $this->setRedirect('index.php?option=com_[component]', $msg);
     }
 
     /**
@@ -91,6 +91,6 @@ class BoilerplateControllerItem extends BoilerplateController
     {
         $msg = JText::_('Operation Cancelled');
         dd('cancel method');
-        $this->setRedirect('index.php?option=com_boilerplate', $msg);
+        $this->setRedirect('index.php?option=com_[component]', $msg);
     }
 }

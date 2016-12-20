@@ -3,7 +3,7 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Item Table for Boilerplate Component
+ * Item Table for [COmponent] Component
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
@@ -25,7 +25,7 @@ class TableItem extends JTable
      */
     public function __construct(&$_db)
     {
-        parent::__construct('#__boilerplate', 'id', $_db);
+        parent::__construct('#__[component]', 'id', $_db);
     }
 
     /**

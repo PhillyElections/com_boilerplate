@@ -3,21 +3,21 @@
 defined('_JEXEC') or die('Restricted access');
 
 /**
- * Items View for Boilerplate Component
+ * Items View for [COmponent] Component
  *
  * @package    Philadelphia.Votes
  * @subpackage Components
  * @license    GNU/GPL
  */
-class BoilerplateViewItems extends JView
+class [Component]ViewItems extends JView
 {
     /**
-     * Boilerplate view display method
+     * Items view display method
      * @return void
      **/
     public function display($tpl = null)
     {
-        JToolBarHelper::title(JText::_('Boilerplate Items Manager'), 'generic.png');
+        JToolBarHelper::title(JText::_('[COmponent] Items Manager'), 'generic.png');
         JToolBarHelper::deleteList();
         JToolBarHelper::editListX();
         JToolBarHelper::addNewX();

@@ -1,2 +1,2 @@
 DROP TABLE 
-`#__boilerplate`;
+`#__[component]`;
