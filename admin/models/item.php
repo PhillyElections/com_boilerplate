@@ -56,7 +56,6 @@ class [Component]ModelItem extends JModel
         if (!$this->_data) {
             $this->_data           = new stdClass();
             $this->_data->id       = 0;
-            $this->_data->greeting = null;
         }
 
         return $this->_data;
@@ -66,14 +65,10 @@ class [Component]ModelItem extends JModel
      * Method to store a record
      * @return    boolean
      */
-    public function store()
+    public function store($data)
     {
         $row = &$this->getTable();
-
         $dateNow = &JFactory::getDate();
-
-        $data = JRequest::get('post');
-
         $dateIndex = $this->_id ? 'updated' : 'created';
 
         foreach ($data as $key => $value) {
