@@ -7,7 +7,7 @@ if (count(JRequest::getVar('msg', null, 'post'))) {
         JError::raiseWarning(1, $msg);
     }
 }
-
+d('item: in default form', $this);
 // try to cast to object next
 $item = !$this->isNew ? $this->item : JRequest::get('post');
 
