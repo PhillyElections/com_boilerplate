@@ -3,7 +3,7 @@ defined('_JEXEC') or die('Restricted access');
 
 $pagination = &$this->pagination;
 $items      = $this->items;
-d($this);
+
 ?>
 <form action="<?=JRoute::_('index.php?option=com_[component]');?>" method="post" name="adminForm" id="adminForm">
     <div id="editcell">
