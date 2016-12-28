@@ -40,6 +40,18 @@ class [Component]ControllerItems extends [Component]Controller
     public function add()
     {
         $mainframe = JFactory::getApplication();
-        $mainframe->redirect('index.php?option=com_[component]&controller=item&task=add&&cid=' . $cid[0]);
+        $cid       = JRequest::getVar('cid');
+        $mainframe->redirect('index.php?option=com_[component]&controller=item&task=add&cid=' . $cid[0]);
+    }
+
+    /**
+     * Redirect Add task to Item Controll
+     * @return void
+     */
+    public function publish()
+    {
+        $mainframe = JFactory::getApplication();
+        $cid       = JRequest::getVar('cid');
+        $mainframe->redirect('index.php?option=com_[component]&controller=item&task=publish&cid=' . $cid[0]);
     }
 }
