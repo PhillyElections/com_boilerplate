@@ -31,6 +31,7 @@ for ($i = 0, $n = count($items); $i < $n; $i++) {
     $row     = &$items[$i];
     $checked = JHTML::_('grid.id', $i, $row->id);
     $published = JHTML::_('grid.published', $row, $i);
+    $link = JRoute::_('index.php?option=com_boilerplate&controller=item&task=edit&cid[]='.$row->id);
 
             ?>
                 <tr class="<?="row$k";?>">
@@ -44,7 +45,7 @@ for ($i = 0, $n = count($items); $i < $n; $i++) {
                         <?=$published;?>
                     </td>
                     <td>
-                        <?=$row->field;?>
+                        <a href="<?=$link?>"><?=$row->field;?></a>
                     </td>
                 </tr>
             <?php
