@@ -10,13 +10,16 @@ d($this);
         <table class="adminlist">
             <thead>
                 <tr>
-                    <th width="5">
+                    <th width="1px">
                         <?=JText::_('ID');?>
                     </th>
-                    <th width="5">
+                    <th width="1px">
                         <input type="checkbox" name="toggle" value="" onclick="checkAll(<?=count($items);?>);" />
                     </th>
-                    <th width="5">
+                    <th width="1px">
+                        P
+                    </th>
+                    <th width="10%">
                         <?=JText::_('FIELD');?>
                     </th>
                 </tr>
@@ -27,13 +30,18 @@ $k = 0;
 for ($i = 0, $n = count($items); $i < $n; $i++) {
     $row     = &$items[$i];
     $checked = JHTML::_('grid.id', $i, $row->id);
-    ?>
+    $published = JHTML::_('grid.published', $row, $i);
+
+            ?>
                 <tr class="<?="row$k";?>">
                     <td>
                         <?=$row->id;?>
                     </td>
                     <td>
                         <?=$checked;?>
+                    </td>
+                    <td>
+                        <?=$published;?>
                     </td>
                     <td>
                         <?=$row->field;?>
