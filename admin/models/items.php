@@ -107,4 +107,36 @@ class [Component]ModelItems extends JModel
 
         return $this->_pagination;
     }
+
+    /**
+     * publish items
+     *
+     * @return void
+     */
+    public function publish()
+    {
+        $cid = JRequest::getVar('cid');
+
+        foreach ($cid as $id) {
+            $row = JTable::getInstance('Items', 'Table');
+            $row->load($id);
+            $row->publish($id, 1);
+        }
+    }
+
+    /**
+     * unpublish items
+     *
+     * @return void
+     */
+    public function unpublish()
+    {
+        $cid = JRequest::getVar('cid');
+
+        foreach ($cid as $id) {
+            $row = JTable::getInstance('Items', 'Table');
+            $row->load($id);
+            $row->publish($id, 0);
+        }
+    }
 }
