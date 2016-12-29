@@ -94,7 +94,7 @@ class [Component]ModelItem extends JModel
 
         // Store the web link table to the database
         if (!$row->store()) {
-            $this->setError($row->getErrorMsg());
+            $this->setError($this->_db->getErrorMsg());
             return false;
         }
 
